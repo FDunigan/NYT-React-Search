@@ -1,22 +1,19 @@
-import axios from "axios"; 
-const URL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=";
-const API = "8124c54a610c4450a7bbeb0a4ed2f9b8";
+import axios from "axios";
+const BASEURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=";
+const APIKEY = "8124c54a610c4450a7bbeb0a4ed2f9b8:0:74623931&q=";
 
 export default {
-  // Gets all articles
-  getArticles: function() {
-    return axios.get("/api/articles");
+  search: function(query) {
+    return axios.get(BASEURL + APIKEY + query);
   },
-  // Gets the article with the given id
-  getArticle: function(id) {
-    return axios.get("/api/articles/" + id);
+  saveArticle: function(articleObject){
+    return axios.post('/saveArticle', articleObject);
   },
-  // Deletes the article with the given id
-  deleteArticle: function(id) {
-    return axios.delete("/api/articles/" + id);
+  getSavedArticles: function(){
+    return axios.get('/getSavedArticles');
   },
-  // Saves an article to the database
-  saveArticle: function(articleData) {
-    return axios.post("/api/articles", articleData);
+  deleteSavedArticle: function(id){
+    return axios.delete('/deleteSavedArticle', {data: {articleId: id}})
   }
+
 };
