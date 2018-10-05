@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
 import API from '../../utils/API';
-import Saved from '../../components/saved';
+import SavedItem from '../../components/savedItem';
 import Nav from '../../components/nav';
 
-class Save extends Component {
+class Saved extends Component {
 
   constructor(props){
     super(props)
@@ -21,7 +21,7 @@ class Save extends Component {
       this.setState({
         articles:  resArticles.data.map(eachArticle => {
                   return(
-                  <Save date={eachArticle.date} key={eachArticle.articleId} articleId={eachArticle.articleId}
+                  <SavedItem date={eachArticle.date} key={eachArticle.articleId} articleId={eachArticle.articleId}
                     url={eachArticle.url} title={eachArticle.title} image={eachArticle.image} onDelete={this.onDelete}/>
                   );
                 })
@@ -40,7 +40,7 @@ class Save extends Component {
       this.setState({
         articles:  articles.map(eachArticle => {
                   return(
-                  <Save date={eachArticle.date} key={eachArticle.articleId} articleId={eachArticle.articleId}
+                  <SavedItem date={eachArticle.date} key={eachArticle.articleId} articleId={eachArticle.articleId}
                     url={eachArticle.url} title={eachArticle.title} image={eachArticle.image} onDelete={this.onDelete}/>
                   );
                 })
@@ -130,4 +130,4 @@ class Save extends Component {
   } // End of Render
 } // End of Class
 
-export default Save;
+export default Saved;

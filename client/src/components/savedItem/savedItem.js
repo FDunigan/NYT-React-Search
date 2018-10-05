@@ -3,7 +3,7 @@ import React, {Component} from "react";
 import API from '../../utils/API';
 
 /////////////////////////////////////////////// /* Class */ ////////////////////////////////////////////////////////
-export default class Card extends Component {
+export default class savedItem extends Component {
 
   constructor(){
     super();
