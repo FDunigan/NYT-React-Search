@@ -2,9 +2,7 @@
 The New York Times React Search App utilizes the React mounting lifecycle to query and display articles based on user searches. 
 
 ## App Home Page
-![Search]("https://user-images.githubusercontent.com/37125191/46574066-e70ef180-c96b-11e8-9aba-fc4440076d50.PNG")
-![Results]("https://user-images.githubusercontent.com/37125191/46574075-0443c000-c96c-11e8-916e-78843a651429.PNG")
-
+<img width="901" alt="nyt" src="https://user-images.githubusercontent.com/37125191/46574116-a5cb1180-c96c-11e8-8449-f50bcca41f46.PNG">
 <img width="862" alt="result" src="https://user-images.githubusercontent.com/37125191/46574075-0443c000-c96c-11e8-916e-78843a651429.PNG">
 
 ## Demo
