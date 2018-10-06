@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./search.css";
 import moment from "moment";
 
 export default class Search extends Component {

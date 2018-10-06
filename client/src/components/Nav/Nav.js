@@ -17,19 +17,6 @@ class Nav extends Component {
                 New York Times Search!
               </div>
             </li>
-            <li>
-              <a
-                onClick={() => window.location.replace("/")}
-                style={{ "text-decoration": "none" }}
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <NavLink to="/saved" style={{ "text-decoration": "none" }}>
-                Saved
-              </NavLink>
-            </li>
           </div>
         </nav>
       </div>
