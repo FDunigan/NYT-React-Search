@@ -1,6 +1,5 @@
 const db = require("../models");
 
-// Defining methods for the booksController
 module.exports = {
   save: function(req, res) {
     console.log("Save Article Path hit");
@@ -8,14 +7,13 @@ module.exports = {
       response
     ) {
       if (response === null) {
-        // Only Create Article if it has not been Created
         db.Article.create(req.body)
           .then(response => {
             console.log(response + " Has been Created");
             res.send("Sucessfully Saved!");
           })
           .catch(err => res.json(err));
-      } // End if
+      }
     });
   },
 

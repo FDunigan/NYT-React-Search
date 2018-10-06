@@ -27,7 +27,7 @@ class Saved extends Component {
                 })
       })
 
-    }); // End of then
+    });
   }
 
 
@@ -35,7 +35,7 @@ class Saved extends Component {
 
     API.getSavedArticles().then((savedArticles) => {
 
-      let articles = savedArticles.data; // Array
+      let articles = savedArticles.data; 
 
       this.setState({
         articles:  articles.map(eachArticle => {
@@ -127,7 +127,7 @@ class Saved extends Component {
       </div>
     </div>
     );
-  } // End of Render
-} // End of Class
+  } 
+} 
 
 export default Saved;
